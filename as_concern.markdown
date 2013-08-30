@@ -84,6 +84,7 @@ end
 
 class Bw
   self.class.class_eval do
+  # what if singleton_class.class_eval
     include Editorial::Page1
   end
 end
