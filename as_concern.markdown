@@ -118,6 +118,16 @@ module Editorial
   end
 end
 
+class Bbcom
+  include Editorial::Page
+end
+
+Bbcom.singleton_class.instance_methods.grep /draf/
+#=> [:draft_version]
+
+Bbcom.singleton_class.ancestors
+#=> [Editorial::Page::ClassMethods, Class, Module, Object, Kernel, BasicObject]
+
 ```
 
 
