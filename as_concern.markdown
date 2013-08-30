@@ -39,7 +39,7 @@ end
 
 ```
 
-#### question: 
+#### question1: 
 ```ruby
 module Editorial
   module Page1
@@ -66,6 +66,38 @@ Bbcom.draft_version
 
 Bbcom.singleton_class.ancestors
 #=>[Editorial::Page2, Editorial::Page1, Class, Module, Object, Kernel, BasicObject]
+```
+
+#### question2: withou extend how can you use include add class methods
+
+```ruby
+module Editorial
+  module Page1
+    def aa_contents
+    end
+  end
+
+  module Page2
+    def aa_draft_version
+    end
+  end
+end
+
+class Bbcom
+  extend Editorial::Page1
+end
+
+class Bw
+  self.class.class_eval do
+    include Editorial::Page1
+  end
+end
+
+Bw.singleton_class.ancestors
+#=> [Class, Editorial::Page1, Module, Object, Kernel, BasicObject]
+
+Bbcom.singleton_class.ancestors
+#=> [Editorial::Page1, Class, Module, Object, Kernel, BasicObject]
 ```
 
 
