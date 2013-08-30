@@ -16,7 +16,7 @@ class Bbcom < ActiveRecord::Base
 end
 ```
 
-#### solution 1
+#### Solution 1: 
 
 ```ruby
 module Editorial
@@ -95,7 +95,7 @@ Bbcom.singleton_class.ancestors
 
 
 
-#### mixed in instance method and class method
+#### Solution2: mixed in instance method and class method
 
 ```ruby
 
