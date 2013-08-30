@@ -182,6 +182,7 @@ module Editorial
   end
 
   module Page2
+    include Page1
     def self.included(base)
       scope :golden, ->(flag) { where(golden: flag) }
     end
@@ -216,6 +217,7 @@ module Editorial
 
   module Page2
   extend ActiveSupport::Concern
+  include Page1
     included do 
       scope :golden, ->(flag) { where(golden: flag) }
     end
