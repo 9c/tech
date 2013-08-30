@@ -200,8 +200,8 @@ require 'active_support/concern'
 
 module Editorial
   module Page1
-  included do
-    extend ActiveSupport::Concern
+  extend ActiveSupport::Concern
+    included do
       def self.draft_version
         ...
       end
