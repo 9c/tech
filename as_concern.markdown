@@ -71,18 +71,6 @@ Bbcom.singleton_class.ancestors
 #### question2: withou extend how can you use include add class methods
 
 ```ruby
-module Editorial
-  module Page1
-    def aa_contents
-    end
-  end
-
-  module Page2
-    def aa_draft_version
-    end
-  end
-end
-
 class Bbcom
   extend Editorial::Page1
 end
