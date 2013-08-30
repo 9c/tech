@@ -73,6 +73,8 @@ Bbcom.draft_version
 #=> page2
 ```
 
+![rubymethodlookupflow](https://f.cloud.github.com/assets/83296/1060170/e2194dee-11a9-11e3-82e3-6dd870b396a7.png)
+
 #### question2: withou extend how can you use include add class methods
 
 ```ruby
