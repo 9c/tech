@@ -68,4 +68,13 @@ end
 
 ### include vs extend vs included
 
+```ruby
+class Dog
+  def self.bark
+  end
+end
+
+Dog.singleton_class.instance_methods
+```
+
 
