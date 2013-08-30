@@ -133,6 +133,34 @@ Bbcom.singleton_class.ancestors
 
 ```
 
+### Solution3: ActiveSupport::Concern
+
+```ruby
+require 'active_support/concern'
+
+module Editorial
+  module Page
+    extend ActiveSupport::Concern
+
+    included do
+      scope :golden, ->(flag) { where(golden: flag) }
+    end
+    
+    def contents
+    end
+
+    module ClassMethods
+      def draft_version
+      end
+    end
+  end
+end
+
+class Bbcom
+  include Editorial::Page
+end
+```
+
 
 ### include vs extend vs included
 
