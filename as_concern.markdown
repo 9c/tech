@@ -3,8 +3,16 @@
 ### Task1 
 
 ```ruby
-class Bloomberg
+class Bbcom < ActiveRecord::Base
   scope :golden, ->(flag) { where(golden: flag)}
+  has_many :page_contents
+  
+  def contents
+  end
+  
+  def self.draft_version
+  end
+  
 end
 ```
 
