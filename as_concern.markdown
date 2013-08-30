@@ -2,7 +2,7 @@
 
 ### Task1 
 
-mixed in instance method and class method
+#### mixed in instance method and class method
 
 ```ruby
 
