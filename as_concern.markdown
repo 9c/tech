@@ -20,16 +20,22 @@ end
 
 ```ruby
 
-module M
-  def self.included(base)
-    base.extend ClassMethods
-    base.class_eval do
-      scope :disabled, -> { where(disabled: true) }
+module Editorial
+  module page
+    def self.included(base)
+      base.extend ClassMethods
+      base.class_eval do
+        scope :golden, ->(flag) { where(golden: flag) }
+      end
     end
-  end
+    
+    def contents
+    end
 
-  module ClassMethods
-    ...
+    module ClassMethods
+      def draft_version
+      end
+    end
   end
 end
 
