@@ -16,6 +16,29 @@ class Bbcom < ActiveRecord::Base
 end
 ```
 
+#### solution 1
+
+```ruby
+module Editorial
+  module Page1
+    def contents
+    end
+  end
+  
+  module Page2
+    def draft_version
+    end
+  end
+end
+
+class Bbcom < ActiveRecord::Base
+  include Editorial::Page1
+  extend Editorial::Page2
+end
+
+```
+
+
 #### mixed in instance method and class method
 
 ```ruby
