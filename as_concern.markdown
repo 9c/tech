@@ -39,6 +39,36 @@ end
 
 ```
 
+#### question: 
+```ruby
+module Editorial
+  module Page1
+    def draft_version
+    end
+  end
+  
+  module Page2
+    def draft_version
+    end
+  end
+end
+
+class Bbcom < ActiveRecord::Base
+  extend Editorial::Page1
+  extend Editorial::Page2
+  scope :golden, ->(flag) { where(golden: flag)}
+end
+
+Bbcom.draft_version
+#=> Page1 or Page2 
+# reason && How can that happen
+
+
+Bbcom.singleton_class.ancestors
+#=>[Editorial::Page2, Editorial::Page1, Class, Module, Object, Kernel, BasicObject]
+```
+
+
 
 #### mixed in instance method and class method
 
