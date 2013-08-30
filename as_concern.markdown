@@ -171,9 +171,12 @@ module Editorial
   module Page1
     def self.included(base)
       base.class_eval do
-        def self.draft_version
-          ...
-        end
+        scope :golden, ->(flag) { where(golden: flag) }
+      end
+    end
+    
+    module ClassMethods
+      def draft_version
       end
     end
   end
@@ -202,16 +205,19 @@ module Editorial
   module Page1
   extend ActiveSupport::Concern
     included do
-      def self.draft_version
-        ...
+      scope :golden, ->(flag) { where(golden: flag) }
+    end 
+    
+    module ClassMethods
+      def draft_version
       end
-    end    
+    end
   end
 
   module Page2
   extend ActiveSupport::Concern
     included do 
-      base.draft_version
+      scope :golden, ->(flag) { where(golden: flag) }
     end
   end
 end
