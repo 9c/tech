@@ -78,11 +78,11 @@ Bbcom.draft_version
 #### question2: withou extend how can you use include add class methods
 
 ```ruby
-class Bbcom
+class Bbcom < ActiveRecord::Base
   extend Editorial::Page1
 end
 
-class Bw
+class Bw < ActiveRecord::Base
   self.class.class_eval do
   # what if singleton_class.class_eval
     include Editorial::Page1
@@ -121,7 +121,7 @@ module Editorial
   end
 end
 
-class Bbcom
+class Bbcom < ActiveRecord::Base
   include Editorial::Page
 end
 
@@ -156,11 +156,71 @@ module Editorial
   end
 end
 
-class Bbcom
+class Bbcom < ActiveRecord::Base
   include Editorial::Page
 end
 ```
 
+### Task2: draft_version in module's module
+
+
+### Solution1:
+
+```ruby
+module Editorial
+  module Page1
+    def self.included(base)
+      base.class_eval do
+        def self.draft_version
+          ...
+        end
+      end
+    end
+  end
+
+  module Page2
+    def self.included(base)
+      base.draft_version
+    end
+  end
+end
+
+class Bbcom < ActiveRecord::Base 
+  include Editorial::Page1 
+  include Editorial::Page2
+end
+
+```
+
+### Solution2:
+
+```ruby
+
+require 'active_support/concern'
+
+module Editorial
+  module Page1
+  included do
+    extend ActiveSupport::Concern
+      def self.draft_version
+        ...
+      end
+    end    
+  end
+
+  module Page2
+  extend ActiveSupport::Concern
+    included do 
+      base.draft_version
+    end
+  end
+end
+
+class Bbcom < ActiveRecord::Base 
+  include Editorial::Page2
+end
+
+```
 
 ### include vs extend vs included
 
