@@ -2,6 +2,12 @@
 
 ### Task1 
 
+```ruby
+class Bloomberg
+  scope :golden, ->(flag) { where(golden: flag)}
+end
+```
+
 #### mixed in instance method and class method
 
 ```ruby
