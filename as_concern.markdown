@@ -44,11 +44,13 @@ end
 module Editorial
   module Page1
     def draft_version
+      'page1'
     end
   end
   
   module Page2
     def draft_version
+      'page2'
     end
   end
 end
@@ -66,6 +68,9 @@ Bbcom.draft_version
 
 Bbcom.singleton_class.ancestors
 #=>[Editorial::Page2, Editorial::Page1, Class, Module, Object, Kernel, BasicObject]
+
+Bbcom.draft_version
+#=> page2
 ```
 
 #### question2: withou extend how can you use include add class methods
