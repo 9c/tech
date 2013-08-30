@@ -45,7 +45,7 @@ end
 ```ruby
 
 module Editorial
-  module page
+  module Page
     def self.included(base)
       base.extend ClassMethods
       base.class_eval do
