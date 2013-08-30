@@ -1,6 +1,6 @@
 ## About ActiveSupport::Concern
 
-### Task1 
+### Task Refactor
 
 ```ruby
 class Bbcom < ActiveRecord::Base
@@ -34,6 +34,7 @@ end
 class Bbcom < ActiveRecord::Base
   include Editorial::Page1
   extend Editorial::Page2
+  scope :golden, ->(flag) { where(golden: flag)}
 end
 
 ```
