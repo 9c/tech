@@ -183,7 +183,7 @@ module Editorial
 
   module Page2
     def self.included(base)
-      base.draft_version
+      scope :golden, ->(flag) { where(golden: flag) }
     end
   end
 end
