@@ -236,15 +236,6 @@ https://github.com/rails/rails/blob/master/activesupport/lib/active_support/conc
 
 
 
-### include vs extend vs included
 
-```ruby
-class Dog
-  def self.bark
-  end
-end
-
-Dog.singleton_class.instance_methods
-```
 
 
