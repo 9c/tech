@@ -1,3 +1,10 @@
+#### array of value
+
+当提交表单的时候，
+
+`check_box_tag "product_ids[]", product.id`
+
+
 ```ruby
 <%= form_tag discontinue_products_path, method: :put do %>
 <table>
