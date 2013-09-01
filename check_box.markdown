@@ -1,4 +1,4 @@
-```html
+```ruby
 <%= form_tag discontinue_products_path, method: :put do %>
 <table>
   <tr>
