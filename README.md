@@ -7,3 +7,8 @@ OAuth is protocol or specification focuses on client developer simplicity while 
 ![abc](http://i.stack.imgur.com/3oDJt.png)
 
 [reference](http://stackoverflow.com/questions/11631928/authenticating-with-oauth2-for-an-app-and-a-website)
+
+
+### Twitter application
+
+![twitter app](http://www.webdevdoor.com/wp-content/uploads/2013/02/twitter-feed-authentication-step2.jpg)
