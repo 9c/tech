@@ -33,4 +33,5 @@ GET       /oauth/token/info
 
 outh provider:
 
-[1] [doorkeeper](https://github.com/applicake/doorkeeper)
+1. [doorkeeper](https://github.com/applicake/doorkeeper)
+2. [rack oauth2](https://github.com/nov/rack-oauth2)
