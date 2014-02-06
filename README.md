@@ -36,6 +36,11 @@ GET       /oauth/token/info
 ![admin](http://asciicasts.com/system/photos/1194/original/E353I03.png)
 
 
+### User grant
+
+![user](http://asciicasts.com/system/photos/1195/original/E353I04.png)
+
+
 outh provider:
 
 1. [doorkeeper](https://github.com/applicake/doorkeeper)
