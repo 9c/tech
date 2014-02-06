@@ -31,6 +31,11 @@ GET       /oauth/token/info
 
 ```
 
+### admin panel
+
+![admin](http://asciicasts.com/system/photos/1194/original/E353I03.png)
+
+
 outh provider:
 
 1. [doorkeeper](https://github.com/applicake/doorkeeper)
