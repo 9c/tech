@@ -32,4 +32,5 @@ GET       /oauth/token/info
 ```
 
 outh provider:
+
 [1] [doorkeeper](https://github.com/applicake/doorkeeper)
