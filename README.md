@@ -12,3 +12,21 @@ OAuth is protocol or specification focuses on client developer simplicity while 
 ### Twitter application
 
 ![twitter app](http://www.webdevdoor.com/wp-content/uploads/2013/02/twitter-feed-authentication-step2.jpg)
+
+
+
+### build Oauth provider
+
+```ruby
+
+
+GET       /oauth/authorize
+POST      /oauth/authorize
+DELETE    /oauth/authorize
+POST      /oauth/token
+resources /oauth/applications
+GET       /oauth/authorized_applications
+DELETE    /oauth/authorized_applications/:id
+GET       /oauth/token/info
+
+```
