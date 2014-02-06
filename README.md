@@ -1,4 +1,4 @@
-wind
+OAuth 2.0
 ====
 
-Used to practice the technical issue
+OAuth is protocol or specification focuses on client developer simplicity while providing specific authorization flows for web applications, desktop applications, mobile phones, and living room devices.
